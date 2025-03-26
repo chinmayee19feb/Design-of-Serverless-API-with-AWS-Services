@@ -1,5 +1,6 @@
 # Build a Serverless RESTful API with AWS API Gateway, Lambda, and DynamoDB
-![AWS Serverless API drawio](https://github.com/user-attachments/assets/ef8d6d74-d645-46b0-b832-3f46c73f6cda)
+![AWS Serverless API drawio101](https://github.com/user-attachments/assets/15921382-5339-4767-bf4a-56db88e7c1ac)
+
 ## Overview
 This Project demonstrates how to create a fully serverless RESTful API using AWS API Gateway, AWS Lambda, and Amazon DynamoDB.
 The API provides a single POST endpoint that supports various DynamoDB operations, such as creating, reading, updating, deleting, and scanning items in a DynamoDB table. Additionally, it includes utility operations for testing and debugging.
@@ -161,39 +162,12 @@ Let's test our newly created function. We haven't created DynamoDB and the API y
 
 Create the DynamoDB table that the Lambda function uses.
 
-To create a DynamoDB table
-    - **Open the DynamoDB console.**
-    - **Choose Create table.**
-    - **Create a table with the following settings.**
-          - **Table name –   {
-  "Version": "2012-10-17",
-  "Statement": [
-  {
-    "Sid": "Stmt1428341300017",
-    "Action": [
-      "dynamodb:DeleteItem",
-      "dynamodb:GetItem",
-      "dynamodb:PutItem",
-      "dynamodb:Query",
-      "dynamodb:Scan",
-      "dynamodb:UpdateItem"
-    ],
-    "Effect": "Allow",
-    "Resource": "*"
-  },
-  {
-    "Sid": "",
-    "Resource": "*",
-    "Action": [
-      "logs:CreateLogGroup",
-      "logs:CreateLogStream",
-      "logs:PutLogEvents"
-    ],
-    "Effect": "Allow"
-  }
-  ]
-  }**
-          - **Primary key – id (string)**
+### To create a DynamoDB table
+- **Open the DynamoDB console.**
+- **Choose Create table.**
+- **Create a table with the following settings.**
+  - **Table name –  DynamoDB-for-Lambda-APIGW**
+  - **Primary key – id (string)**
 
 ![110-dynamodb](https://github.com/user-attachments/assets/2b4e2bf8-7269-45c8-ba9d-b04355f7711e)
 ![111-dynamodb2](https://github.com/user-attachments/assets/1c3d4551-327d-44d3-948e-b54dea7ad7b0)
